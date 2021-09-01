@@ -4,10 +4,10 @@ import {Link} from 'react-router-dom'
 class NavBar extends Component {
   render() {
     return (
-      <nav id="Nav-Bar">
+      <nav id="nav-bar">
           <ul>
               <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
               </li>
               <li>
               <Link to="/about">About</Link>

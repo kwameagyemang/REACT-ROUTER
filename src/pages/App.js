@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom'
 // Components
 // relative path means you are starting from this file and going somewhere else
 // we are inside App.js and we are trying to get into NavBar.js
 // . = current folder whereas .. means the parent folder
 import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 // import { Link } from 'react-router-dom'
-import './App'
 
+// pages
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
+// css
+import '../App.css'
 
 /* 
   =========================================
@@ -67,13 +73,36 @@ import './App'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div id="app">
         {/* THIS IS OUR HOME PAGE */}
         {/* Link is imported at the top. We pass on attribute "to" which tells Link what the URL path parameter should look like */}
         {/* <Link to="/home">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link> */}
         <NavBar />
+
+          {/* 
+            We will use <Switch> from React Router which looks inside it's children <Route> to render the first one that matches the URL
+          
+          
+          
+          
+          */}
+
+          <Switch>
+            {/* Route is a child */}
+            <Route path="/contact">
+              <Contact/>
+            </Route>
+
+            <Route path="/about">
+              <About/>
+            </Route>
+
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
         <Footer />
       </div>
     );

@@ -1,6 +1,15 @@
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #nav-bar {
   background-color: lightblue;
   height: 50px;
+  width: 100%;
 }
 
 /* specificity */
@@ -14,4 +23,5 @@
   background-color: lightgreen;
   height: 50px;
   text-align: center;
+  width: 100%;
 }
