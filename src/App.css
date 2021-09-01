@@ -1,0 +1,17 @@
+#nav-bar {
+  background-color: lightblue;
+  height: 50px;
+}
+
+/* specificity */
+#nav-bar ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+#footer {
+  background-color: lightgreen;
+  height: 50px;
+  text-align: center;
+}
